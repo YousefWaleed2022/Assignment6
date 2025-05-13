@@ -1,0 +1,169 @@
+{
+  "metadata_test": {
+    "filters": {
+      "year_range": [
+        2015,
+        2023
+      ],
+      "domain": "Reinforcement Learning",
+      "methodology": "empirical study"
+    },
+    "expected_results_count": 2
+  },
+  "edge_cases": [
+    {
+      "query": "Explain quantum computing using only concepts from medieval philosophy.",
+      "expected_response": "This request involves incompatible domains. I cannot provide a meaningful answer.",
+      "type": "infeasible_connection"
+    },
+    {
+      "query": "What is the capital of Mars?",
+      "expected_response": "The question contains false premises. Mars does not have a capital city.",
+      "type": "invalid_query"
+    }
+  ],
+  "generation_tests": [
+    {
+      "query": "Summarize the BIG-bench framework for evaluating large language models.",
+      "required_sources": [
+        "holistic_evaluation_of_language_models.pdf"
+      ],
+      "expected_answer_keywords": [
+        "BIG-bench",
+        "task diversity",
+        "human-level performance",
+        "bias evaluation"
+      ],
+      "evaluation_criteria": {
+        "accuracy": true,
+        "completeness": true,
+        "source_integration": true
+      }
+    },
+    {
+      "query": "Compare the performance of CNNs and Vision Transformers in computer vision tasks.",
+      "required_sources": [
+        "vision_transformers_at_scale.pdf"
+      ],
+      "expected_answer_keywords": [
+        "patch embedding",
+        "global attention",
+        "scalability",
+        "accuracy"
+      ],
+      "query_type": "comparative"
+    },
+    {
+      "query": "Summarize the evolution of diffusion models from 2020 to 2023.",
+      "required_sources": [
+        "denoising_diffusion_probabilistic_models.pdf"
+      ],
+      "expected_answer_keywords": [
+        "DDPM",
+        "score-based models",
+        "image generation",
+        "stability"
+      ],
+      "evaluation_criteria": {
+        "accuracy": true,
+        "coherence": true,
+        "source_integration": true
+      }
+    }
+  ],
+  "retrieval_tests": [
+    {
+      "query": "What are the key challenges in evaluating large language models?",
+      "relevant_doc_ids": [
+        "holistic_evaluation_of_language_models.pdf"
+      ],
+      "expected_snippets": [
+        "BIG-bench evaluates LLMs across 200+ tasks requiring reasoning, knowledge, and creativity...",
+        "Challenges include measuring logical consistency and bias amplification..."
+      ],
+      "query_type": "analysis"
+    },
+    {
+      "query": "Explain how Chain-of-Thought (CoT) improves reasoning in large language models.",
+      "relevant_doc_ids": [
+        "large_language_models_struggle_with_logical_consistency.pdf"
+      ],
+      "expected_snippets": [
+        "Chain-of-Thought prompting generates intermediate reasoning steps to improve accuracy...",
+        "CoT reduces logical inconsistencies in multi-step question answering..."
+      ],
+      "query_type": "explanatory"
+    },
+    {
+      "query": "Compare BERT and GPT-3 in terms of their pretraining objectives and architectures.",
+      "relevant_doc_ids": [
+        "bert_pretraining.pdf",
+        "gpt-3_language_models_are_few-shot_learners.pdf"
+      ],
+      "expected_snippets": [
+        "BERT uses masked language modeling and next-sentence prediction...",
+        "GPT-3 focuses on autoregressive language modeling with few-shot learning..."
+      ],
+      "query_type": "comparative"
+    },
+    {
+      "query": "What is the Deep Q-Network (DQN) algorithm and its application in Atari game mastery?",
+      "relevant_doc_ids": [
+        "human_level_control_through_deep_reinforcement_learning.pdf"
+      ],
+      "expected_snippets": [
+        "Deep Q-Network (DQN) combines Q-learning with deep neural networks...",
+        "DQN achieves human-level performance on Atari 2600 games through experience replay..."
+      ],
+      "query_type": "technical"
+    },
+    {
+      "query": "How do Vision Transformers (ViT) adapt the Transformer architecture for image recognition?",
+      "relevant_doc_ids": [
+        "vision_transformers_at_scale.pdf"
+      ],
+      "expected_snippets": [
+        "Vision Transformers split images into 16x16 patches processed by linear embeddings...",
+        "Global attention mechanisms enable ViT to outperform CNNs in scalability..."
+      ],
+      "query_type": "factual"
+    },
+    {
+      "query": "Explain how AlphaFold2 predicts protein structures using neural networks.",
+      "relevant_doc_ids": [
+        "alphafold2_protein_prediction.pdf"
+      ],
+      "expected_snippets": [
+        "AlphaFold2 combines attention-based networks with evolutionary information...",
+        "Iterative refinement produces highly accurate 3D structure predictions..."
+      ],
+      "query_type": "technical"
+    },
+    {
+      "query": "What are the key safety concerns in large language models?",
+      "relevant_doc_ids": [
+        "concrete_problems_in_ai_safety.pdf"
+      ],
+      "expected_snippets": [
+        "Misuse potential, unintended bias, and alignment failures are critical risks...",
+        "Scalable oversight remains an open challenge..."
+      ],
+      "query_type": "ethics"
+    },
+    {
+      "query": "What is the Transformer architecture and how does it use attention mechanisms?",
+      "relevant_doc_ids": [
+        "attention_is_all_you_need.pdf"
+      ],
+      "expected_snippets": [
+        "The Transformer model is based on self-attention mechanisms...",
+        "Positional encoding is used to maintain sequence order..."
+      ],
+      "metadata_filters": {
+        "year": "2017",
+        "domain": "Natural Language Processing"
+      },
+      "query_type": "factual"
+    }
+  ]
+}

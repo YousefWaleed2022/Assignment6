@@ -1,0 +1,8 @@
+faiss-cpu
+docx2txt
+langchain_community
+sentence-transformers
+python-dotenv
+pypdf
+langchain
+groq
